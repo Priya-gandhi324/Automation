@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    table,
+    th,
+    td {
+      border: 1px solid black;
+    }
+  </style>
+  <body>
+    <h2>Total</h2>
+    <table style="width: 50%">
+      <tr>
+        <th>Till Date</th>
+        <th>Scrape Type</th>
+        <th>Orders</th>
+        <th>Judgements</th>
+      </tr>
+      {% for total in totals %}
+      <tr>
+        <td>{{ total.till_date }}</td>
+        <td>{{ total.scrape_type }}</td>
+        <td>{{ total.orders }}</td>
+        <td>{{ total.judgements }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>
